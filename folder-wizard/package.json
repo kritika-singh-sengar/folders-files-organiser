@@ -19,6 +19,8 @@
     "vite": "^4.3.2"
   },
   "dependencies": {
+    "ag-grid-community": "^29.3.5",
+    "ag-grid-svelte": "^0.2.0",
     "bootstrap": "^5.2.3",
     "svelte-routing": "^1.8.9"
   }
