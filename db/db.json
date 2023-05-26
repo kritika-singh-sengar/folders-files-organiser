@@ -1,4 +1,12 @@
 {
-    "user" :[{}],
-    "folder" :[{}]
+  "user": [
+    {
+      "name": "Kritika Singh",
+      "email": "kritikasingh@gmail.com",
+      "password": "12345678",
+      "id": 1
+    }
+  ],
+  "folder": [],
+  "file": []
 }
