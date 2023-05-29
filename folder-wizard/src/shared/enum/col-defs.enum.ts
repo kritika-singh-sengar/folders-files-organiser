@@ -1,6 +1,9 @@
 export enum COLUMN_DEFS {
   FOLDER_NAME = "Folder Name",
   LEVEL = "Level",
+  DETAILS = "Details",
+  PARENT = "Parent",
+  ROOT_Folder = "Root Folder",
   CATEGROY = "Category",
   CREATED = "Created",
 }
@@ -11,6 +14,7 @@ export enum CATEGORY {
 }
 
 export enum LEVEL {
-  ROOT = "root",
-  CHILD = "child",
+  ROOT = "Root",
+  CHILD = "Child",
+  SUB_CHILD = "Sub-Child"
 }
