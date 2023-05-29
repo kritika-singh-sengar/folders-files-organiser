@@ -8,13 +8,15 @@ export const FOLDER_COL_DEFS: (ColDef | ColGroupDef)[] = [
       field: "folderName",
       tooltipField: "folderName",
       spanHeaderHeight: true,
+      maxWidth: 150,
     },
     {
       headerName: COLUMN_DEFS.LEVEL,
       headerTooltip: COLUMN_DEFS.LEVEL,
       field: "folderLevel",
       tooltipField: "folderLevel",
-      spanHeaderHeight: true
+      spanHeaderHeight: true,
+      maxWidth: 70
     },
     {
       headerName: COLUMN_DEFS.DETAILS,
@@ -24,18 +26,21 @@ export const FOLDER_COL_DEFS: (ColDef | ColGroupDef)[] = [
           //headerTooltip: COLUMN_DEFS.PARENT,
           field: "parent",
           tooltipField: "parent",
+          maxWidth: 150
         },
         {
           headerName: COLUMN_DEFS.ROOT_Folder,
           //headerTooltip: COLUMN_DEFS.ROOT_Folder,
           field: "rootFolder",
           tooltipField: "rootFolder",
+          maxWidth: 150,
         },
         {
           headerName: COLUMN_DEFS.CATEGROY,
           //headerTooltip: COLUMN_DEFS.CATEGROY,
           field: "category",
           tooltipField: "category",
+          maxWidth: 90
         },
       ],
     },
@@ -44,23 +49,12 @@ export const FOLDER_COL_DEFS: (ColDef | ColGroupDef)[] = [
       headerTooltip: COLUMN_DEFS.CREATED,
       field: "created",
       tooltipField: "created",
-      spanHeaderHeight: true
+      spanHeaderHeight: true,
+      maxWidth: 110
     },
   ];
 
-  let rowData = [
-    {
-      folderName: "kritika",
-      folderLevel: "root",
-      parent: "-",
-      rootFolder: "kritika",
-      category: CATEGORY.FOLDER,
-      created: "23-04-2023",
-    },
-  ];
-  
 export const DEFAULT_COL_DEF: ColDef = {
     editable: false,
-    sortable: true,
-    width: 180,
+    sortable: true,    
   };
