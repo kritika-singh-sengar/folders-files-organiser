@@ -5,16 +5,16 @@ export const FOLDER_COL_DEFS: (ColDef | ColGroupDef)[] = [
     {
       headerName: COLUMN_DEFS.FOLDER_NAME,
       headerTooltip: COLUMN_DEFS.FOLDER_NAME,
-      field: "folderName",
-      tooltipField: "folderName",
+      field: "name",
+      tooltipField: "name",
       spanHeaderHeight: true,
       maxWidth: 150,
     },
     {
       headerName: COLUMN_DEFS.LEVEL,
       headerTooltip: COLUMN_DEFS.LEVEL,
-      field: "folderLevel",
-      tooltipField: "folderLevel",
+      field: "level",
+      tooltipField: "level",
       spanHeaderHeight: true,
       maxWidth: 70
     },
@@ -23,21 +23,18 @@ export const FOLDER_COL_DEFS: (ColDef | ColGroupDef)[] = [
       children: [
         {
           headerName: COLUMN_DEFS.PARENT,
-          //headerTooltip: COLUMN_DEFS.PARENT,
           field: "parent",
           tooltipField: "parent",
           maxWidth: 150
         },
         {
           headerName: COLUMN_DEFS.ROOT_Folder,
-          //headerTooltip: COLUMN_DEFS.ROOT_Folder,
           field: "rootFolder",
           tooltipField: "rootFolder",
           maxWidth: 150,
         },
         {
-          headerName: COLUMN_DEFS.CATEGROY,
-          //headerTooltip: COLUMN_DEFS.CATEGROY,
+          headerName: COLUMN_DEFS.CATEGORY,
           field: "category",
           tooltipField: "category",
           maxWidth: 90
@@ -47,8 +44,8 @@ export const FOLDER_COL_DEFS: (ColDef | ColGroupDef)[] = [
     {
       headerName: COLUMN_DEFS.CREATED,
       headerTooltip: COLUMN_DEFS.CREATED,
-      field: "created",
-      tooltipField: "created",
+      field: "createdAt",
+      tooltipField: "createdAt",
       spanHeaderHeight: true,
       maxWidth: 110
     },
