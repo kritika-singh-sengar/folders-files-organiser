@@ -71,6 +71,7 @@
       if (folder.name == data.name) {
         alert(MESSAGE_NAME_EXIST);
         location.reload();
+        return;
       }
     });
 
