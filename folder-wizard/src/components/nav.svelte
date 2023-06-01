@@ -1,9 +1,10 @@
 <script lang="ts">
   import { loggedInUser } from "../shared/stores/user.store";
   import { navigate } from "svelte-routing";
+  
   function logout() {
     loggedInUser.set('');
-    navigate('/login');
+    navigate('/');
   }
 
   const signUp = ()=>{
