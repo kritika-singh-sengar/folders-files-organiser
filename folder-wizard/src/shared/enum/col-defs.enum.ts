@@ -4,7 +4,7 @@ export enum COLUMN_DEFS {
   DETAILS = "Details",
   PARENT = "Parent",
   ROOT_Folder = "Root Folder",
-  CATEGROY = "Category",
+  CATEGORY = "Category",
   CREATED = "Created",
 }
 
