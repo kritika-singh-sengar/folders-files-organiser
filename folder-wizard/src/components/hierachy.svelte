@@ -11,24 +11,19 @@
   import AgGridSvelte from "ag-grid-svelte";
   import { DEFAULT_COL_DEF, FOLDER_COL_DEFS } from "../shared/constants/ag-grid-col-def.constant";
 
-  let response : FOLDER[];
   let columnDefs : (ColDef | ColGroupDef)[] = FOLDER_COL_DEFS;
   let defaultColDef : ColDef = DEFAULT_COL_DEF;
-  let rowData : FOLDER[] = response || [];
+  let rowData : FOLDER[] = [];
 
   header.set("FOLDER & FILE STRUCTURE");
-  
-  //let data;
-  //$: foldersData = response || [];
 
   onMount(async () => {
-    response = await fetch(API_URL.gridDataApi, {
+    rowData = await fetch(API_URL.gridDataApi, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
-    }).then(response=>response.json());//updated 
-    //check if on new add this will load or not
-    foldersInStore.set(response);
-    totalFolder.set(response.length);
+    }).then(response=>response.json());
+    foldersInStore.set(rowData);
+    totalFolder.set(rowData.length);
   });
 
 </script>
@@ -58,13 +53,6 @@
   --ag-header-column-separator-display: block;
   --ag-header-column-separator-height: 100%;
   --ag-header-column-separator-width: 1px;
-  --ag-grid-size: 3px;
-  --ag-list-item-height: 30px;
-  --ag-cell-horizontal-padding: 1rem;
   --ag-selected-row-background-color: white;
 }
-.ag-header-group-cell-label {
-  justify-content: center;
-}
-
 </style>
