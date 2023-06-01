@@ -9,4 +9,4 @@ const response: FOLDER[] = await fetch(API_URL.gridDataApi, {
 
 export const foldersInStore = writable<FOLDER[]>(response || []);
 export const totalFolder = writable<number>(response.length);
-export const header = writable<string>("");
+export const header = writable<string>("FOLDERS AND FILES ORGANIZER");
