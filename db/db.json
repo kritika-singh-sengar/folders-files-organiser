@@ -7,6 +7,51 @@
       "id": 1
     }
   ],
-  "folder": [],
-  "file": []
+  "folder": [
+    {
+      "name": "Kritika",
+      "category": "file",
+      "level": "root",
+      "parent": "--",
+      "rootFolder": "--",
+      "createdAt": "2023-06-01",
+      "id": 1
+    },
+    {
+      "name": "admin",
+      "category": "folder",
+      "level": "root",
+      "parent": "--",
+      "rootFolder": "--",
+      "createdAt": "2023-06-01",
+      "id": 2
+    },
+    {
+      "name": "kritikasingh02",
+      "category": "file",
+      "level": "child",
+      "parent": "admin",
+      "rootFolder": "admin",
+      "createdAt": "2023-06-01",
+      "id": 3
+    },
+    {
+      "name": "Ritika",
+      "category": "file",
+      "level": "child",
+      "parent": "admin",
+      "rootFolder": "admin",
+      "createdAt": "2023-06-01",
+      "id": 4
+    },
+    {
+      "name": "admin123@",
+      "category": "file",
+      "level": "root",
+      "parent": "--",
+      "rootFolder": "--",
+      "createdAt": "2023-06-01",
+      "id": 5
+    }
+  ]
 }
