@@ -860,7 +860,10 @@ function We(l, e, t) {
   });
   const s = async () => {
     o.forEach((v) => {
-      v.name == n.name && (alert(Ge), location.reload());
+      if (v.name == n.name) {
+        alert(Ge), location.reload();
+        return;
+      }
     }), n.category == $.FILE ? n.level == D.ROOT ? (t(0, n.parent = W, n), t(0, n.rootFolder = W, n)) : n.level == D.CHILD ? (t(0, n.parent = r.name, n), t(0, n.rootFolder = r.name, n)) : (t(0, n.parent = r.name, n), t(0, n.rootFolder = r.parent, n)) : n.level == D.ROOT ? (t(0, n.parent = W, n), t(0, n.rootFolder = W, n)) : (t(0, n.parent = r.name, n), t(0, n.rootFolder = r.name, n)), t(0, n.createdAt = (/* @__PURE__ */ new Date()).toJSON().split("T")[0], n), console.log(n), await fetch(G.URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
