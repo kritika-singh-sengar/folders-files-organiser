@@ -14,7 +14,7 @@
 </script>
 <nav class="navbar navbar-light bg-success bg-gradient text-white">
   <div class="container-fluid">
-    <a class="navbar-brand text-white" href="#">Folder Wizard</a>
+    <a class="navbar-brand text-white" href="https://benevolent-buttercream-2b54a5.netlify.app/">Folder Wizard</a>
     {#if $loggedInUser}
     <span>
       <span class="p-1 fw-bold ">{$loggedInUser}</span>
