@@ -18,7 +18,7 @@
   let formCard: CARD = {
     header: "CREATE",
     text: "Click and create new files and folders",
-    link: "https://resplendent-wisp-9c3612.netlify.app/",
+    link: "https://benevolent-buttercream-2b54a5.netlify.app/",
     buttonText: "Create",
     themes: "shadow",
   };
