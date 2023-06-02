@@ -12,6 +12,7 @@
    4. Application display created folders and files in tabular form.
 4. Existing username- kritikasingh@gmail.com and Password- 12345678
 5. For backend of this application Json-Server is used.
+6. Git Url-https://github.com/kritika-singh-sengar/folders-files-organizer
 
 ## Technologies Used:
 1. Svelte v3.57.0
