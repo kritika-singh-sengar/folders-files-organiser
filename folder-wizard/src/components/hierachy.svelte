@@ -10,6 +10,7 @@
   import type { ColDef,ColGroupDef} from "ag-grid-community";
   import AgGridSvelte from "ag-grid-svelte";
   import { DEFAULT_COL_DEF, FOLDER_COL_DEFS } from "../shared/constants/ag-grid-col-def.constant";
+  import { afterUpdate } from "svelte";
 
   let columnDefs : (ColDef | ColGroupDef)[] = FOLDER_COL_DEFS;
   let defaultColDef : ColDef = DEFAULT_COL_DEF;
@@ -17,7 +18,7 @@
 
   header.set("FOLDER & FILE STRUCTURE");
 
-  onMount(async () => {
+  afterUpdate(async () => {
     rowData = await fetch(API_URL.gridDataApi, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
