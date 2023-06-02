@@ -44,3 +44,19 @@
 **So make sure to run json-server locally before running any application.**
 2. Folder-File-Creator: 
    - deployment link: https://benevolent-buttercream-2b54a5.netlify.app/
+  
+## Images:  
+1. Login Screen:
+   ![Login Screen](/images/login.png)
+
+2. After Login:
+   ![Main Screen](/images/main%20screen.png)
+
+3. Create Folders and Files:
+   ![Creator](/images/folder-file-creator.png)
+
+4. After Folder Creation:
+   ![After Folder Creation](/images/after%20adding%20data.png)
+
+5. Random Url:
+   ![Random Url](/images/random%20url%20click.png)
