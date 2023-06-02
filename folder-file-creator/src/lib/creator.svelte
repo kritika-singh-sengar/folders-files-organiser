@@ -67,44 +67,45 @@
   });
 
   const onSubmit = async () => {
+    let flag = true;
     allList.forEach((folder) => {
       if (folder.name == data.name) {
+        flag = false;
         alert(MESSAGE_NAME_EXIST);
-        location.reload();
-        return;
       }
     });
+    if (flag) {
+      if (data.category == CATEGORY.FILE) {
+        if (data.level == LEVEL.ROOT) {
+          data.parent = NO_DATA;
+          data.rootFolder = NO_DATA;
+        } else if (data.level == LEVEL.CHILD) {
+          data.parent = selectedFolder.name;
+          data.rootFolder = selectedFolder.name;
+        } else {
+          data.parent = selectedFolder.name;
+          data.rootFolder = selectedFolder.parent;
+        }
+      } else {
+        if (data.level == LEVEL.ROOT) {
+          data.parent = NO_DATA;
+          data.rootFolder = NO_DATA;
+        } else {
+          data.parent = selectedFolder.name;
+          data.rootFolder = selectedFolder.name;
+        }
+      }
+      data.createdAt = new Date().toJSON().split("T")[0];
+      console.log(data);
 
-    if (data.category == CATEGORY.FILE) {
-      if (data.level == LEVEL.ROOT) {
-        data.parent = NO_DATA;
-        data.rootFolder = NO_DATA;
-      } else if (data.level == LEVEL.CHILD) {
-        data.parent = selectedFolder.name;
-        data.rootFolder = selectedFolder.name;
-      } else {
-        data.parent = selectedFolder.name;
-        data.rootFolder = selectedFolder.parent;
-      }
-    } else {
-      if (data.level == LEVEL.ROOT) {
-        data.parent = NO_DATA;
-        data.rootFolder = NO_DATA;
-      } else {
-        data.parent = selectedFolder.name;
-        data.rootFolder = selectedFolder.name;
-      }
+      await fetch(API_URL.URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      location.reload();
     }
-    data.createdAt = new Date().toJSON().split("T")[0];
-    console.log(data);
-
-    await fetch(API_URL.URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-
-    location.reload();
   };
 </script>
 
@@ -262,21 +263,15 @@
           {/if}
         {/if}
       {/if}
-      
-      <div class="row">
-        <div class="col-50">
-          <button type="reset" class="btn btn-reset">Reset</button>
-        </div>
-        <div class="col-50">
+
+      <div class="row" style="justify-content: center;">
           <button type="submit" class="btn btn-submit">Submit</button>
-        </div>
       </div>
     </form>
   </div>
 </div>
 
 <style>
-
   .color-red {
     color: red;
   }
@@ -303,9 +298,6 @@
   .col-70 {
     flex: 70%;
   }
-  .col-50 {
-    flex: 50%;
-  }
   input[type="text"],
   select {
     width: 100%;
@@ -330,11 +322,7 @@
   .btn-submit {
     background-color: #45a049;
   }
-  .btn-reset {
-    background-color: red;
-  }
-  .btn-submit:hover,
-  .btn-reset:hover {
+  .btn-submit:hover {
     opacity: 0.8;
   }
 
